@@ -22,6 +22,31 @@ Ready-to-use prompts for each step are in [`sdd-basic.md`](./sdd-basic.md).
 | `.github/FUNDING.yml` | Enables the GitHub Sponsor button. |
 | `/specs/` | Where feature specs live. Created when you write your first spec. |
 
+## How `CLAUDE.md` and `sdd-basic.md` work together
+
+The two files have different roles: `CLAUDE.md` holds the **rules** Claude always follows, and `sdd-basic.md` holds the **procedure** you run step by step.
+
+| | `CLAUDE.md` | `sdd-basic.md` |
+|---|---|---|
+| In one line | Rules that always apply | Steps you run one by one |
+| Read by | Claude Code, automatically at session start | You, who copy each prompt into Claude Code |
+| Applies | To every task | To a new feature, in steps 1 to 4 |
+| Contains | SDD rules, four core principles, exceptions, project commands | Prompts for spec, lean review, TDD, and verification |
+| Answers | What to do and what not to do | In what order, and what to ask for |
+
+They reference each other, and each core principle in `CLAUDE.md` maps to a step in `sdd-basic.md`:
+
+| Step in `sdd-basic.md` | Principle in `CLAUDE.md` |
+|---|---|
+| 1. Brainstorm & spec | Think Before Coding |
+| 2. Lean review | Simplicity First |
+| 3. TDD & minimal implementation | Surgical Changes |
+| 4. Verify & review | Goal-Driven Execution |
+
+For example, when you paste the step 3 prompt ("write the failing tests first"), `sdd-basic.md` starts the work. While Claude does it, `CLAUDE.md` keeps constraining it: TDD is the default, existing code stays untouched, and no source changes happen without a spec.
+
+With only `sdd-basic.md`, a skipped prompt means the rules are not applied. With only `CLAUDE.md`, the rules hold but nothing says in what order to work. Together they cover both.
+
 ## Getting started
 
 1. Use this repository as a template (or clone it).

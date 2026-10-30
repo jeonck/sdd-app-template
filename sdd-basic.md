@@ -42,10 +42,4 @@ Ponytail의 철학("최고의 코드는 작성하지 않은 코드다")을 적�
 2. 디버깅용 주석, 사용하지 않는 변수, 중복 로직이 남아있지 않은지 점검하고 정리해줘.
 3. 모든 테스트가 통과하는지 최종 확인 후 완료 보고서를 요약해줘.
 
-💡 팁: 세션 시작 시 CLAUDE.md 세팅
-프로젝트 루트의 CLAUDE.md에 아래 내용을 등록해두면, 위 프롬프트들이 더욱 잘 작동합니다.
-## Development Rules
-- **Process:** Superpowers(Brainstorming -> Plan -> TDD -> Review) 스킬 흐름을 준수한다.
-- **Philosophy:** Ponytail(Minimalism) 철학을 적용하여 오버엔지니어링을 방지하고 불필요한 코드를 추가하지 않는다.
-- **Spec First:** `/specs/` 폴더 내에 명세서가 작성 및 검토되기 전에는 소스 코드를 직접 수정하지 않는다.
-
+💡 팁: 세션 시작 시 적용되는 개발 규칙은 루트의 `CLAUDE.md`를 참고하세요.

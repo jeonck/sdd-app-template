@@ -1,5 +1,21 @@
 Superpowers와 Ponytail의 철학을 실제 Claude Code 환경에서 단계별로 따라 할 수 있는 프롬프트 모음입니다.
 새로운 기능을 개발할 때, 아래 단계에 맞춰 프롬프트를 Claude Code에 차례대로 입력하세요.
+0단계: 환경 점검 (프로젝트당 1회)
+> 목적: 이 템플릿이 활용하는 Superpowers, Ponytail, `/code-review`가 있는지 확인하고, 없으면 설치 방법을 안내받는 단계입니다. 모두 있으면 바로 1단계로 가세요. 스킬 없이도 1~4단계 프롬프트는 동작하지만, 설치하면 더 정교하게 적용됩니다.
+> 
+[단계 0: 환경 점검]
+이 템플릿은 Superpowers, Ponytail 스킬과 `/code-review`를 활용해. 아래를 점검해줘.
+
+1. 현재 사용 가능한 스킬/플러그인 목록에서 Superpowers, Ponytail, `code-review`가 있는지 확인해줘. Ponytail 훅은 Node.js가 필요하니 `node --version`도 확인해줘.
+2. 항목별 있음/없음을 표로 보여줘.
+3. 없는 항목은 직접 설치하지 말고 아래 명령만 안내해줘. 설치는 내가 직접 실행할게.
+   - Superpowers: `/plugin marketplace add obra/superpowers-marketplace` 후 `/plugin install superpowers@superpowers-marketplace`
+   - Ponytail: `/plugin marketplace add DietrichGebert/ponytail` 후 `/plugin install ponytail@ponytail` (포크가 많으니 DietrichGebert 저장소인지 확인)
+   - `code-review`: 설치 대상이 아니야. 없으면 4단계의 선택 항목은 건너뛰어줘.
+4. 설치 후 새 세션에서 이 점검을 다시 실행해 확인할 수 있게 안내해줘.
+
+> 설치 명령은 각 저장소 README에서 최신 여부를 한 번 확인하세요.
+
 1단계: 브레인스토밍 및 스펙 문서 작성
 > 목적: 바로 코딩하지 않고 요구사항을 명확히 정의하여 /specs/에 스펙 문서를 만드는 단계입니다.
 > 

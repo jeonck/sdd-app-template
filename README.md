@@ -50,8 +50,9 @@ With only `sdd-basic.md`, a skipped prompt means the rules are not applied. With
 ## Getting started
 
 1. Use this repository as a template (or clone it).
-2. Fill in the **Project Context & Commands** section of `CLAUDE.md` with your tech stack and build, test, and lint commands.
-3. Open the project in Claude Code and follow the prompts in `sdd-basic.md` for your first feature.
+2. Run the **step 0 preflight prompt** in `sdd-basic.md` once per project. Claude checks whether Superpowers, Ponytail, and `/code-review` are available and, for any that are missing, prints the install commands for you to run yourself. None are required: the prompts in steps 1 to 4 work without them, but the skills make them more precise.
+3. Fill in the **Project Context & Commands** section of `CLAUDE.md` with your tech stack and build, test, and lint commands.
+4. Open the project in Claude Code and follow the prompts in `sdd-basic.md` for your first feature.
 
 ## Example: starting a project
 

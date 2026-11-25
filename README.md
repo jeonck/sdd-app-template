@@ -9,7 +9,7 @@ Instead of jumping straight into code, every feature goes through four steps: de
 1. **Brainstorm & spec** – Clarify requirements, edge cases, data model, API shape, and acceptance criteria, and write them to `/specs/feature-spec.md`.
 2. **Lean review** – Check the spec against the existing codebase, reuse what already exists, and cut unnecessary libraries and abstractions.
 3. **TDD & minimal implementation** – Write failing tests from the acceptance criteria (RED), then write the smallest code that passes them (GREEN).
-4. **Verify & review** – Confirm every acceptance criterion is met, clean up leftovers from the change, and make sure all tests pass.
+4. **Verify & review** – Confirm every acceptance criterion is met, clean up leftovers from the change, and make sure all tests pass. Optionally run `/code-review` to catch bugs the spec check can miss.
 
 Ready-to-use prompts for each step are in [`sdd-basic.md`](./sdd-basic.md).
 
@@ -107,6 +107,7 @@ The implementation is done. Verify it against /specs/feature-spec.md.
 2. Clean up leftovers from this change only: debug comments, unused variables,
    duplicated logic.
 3. Run all tests and summarize the result.
+4. (Optional) Run `/code-review` on this diff to check for bugs. Report only; do not apply fixes.
 ```
 
 For the next feature, repeat steps 1 to 4 with a new spec file. `CLAUDE.md` keeps applying the rules in every step, so you do not need to repeat them in the prompts.
